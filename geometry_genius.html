@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry_genius calculation</title>
+    <!-- framework link is here -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="flex justify-between w-100 bg-sky-100 p-3">
+        <div class="ml-0 md:ml-10 ">
+            <h1 class="font-bold text-3xl">Interactive</h1>
+            <h2 class="font-normal text-2xl">Geometry Genius</h2>
+        </div>
+        <div class="mr-0 md:mr-10 ">
+           <a target="_blank" href="./blog.html"><button class="bg-sky-400 hover:bg-sky-700 text-white px-7 py-2 text-2xl rounded-md">Blog</button></a>
+        </div>
+    </header>
+
+    <main>
+        <section class=" lg:px-5 flex flex-col w-full md:flex-row lg:flex-row" >
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:w-[65%] sm:w-[65%%] w-full mr-2">
+                <div class="rounded-lg w-full shadow-xl mt-6 border-solid border-2 border-grau-200 p-5 text-center random-bg-color" id="triangle-random-bg-color">
+                    <figure><img class="mx-auto" src="images/triangle.png" alt="Shoes" /></figure>
+                    <div class="mt-12">
+                      <h2 id="triangle-text" class="font-bold text-2xl ">Triangle</h2>
+                      <p>Area (A) = 0.5 X b X h</p>
+                      <h1 class="my-4 text-gray-500"><input class="w-1/4 px-2 py-1 bg-gray-100" type="text" name="" id="triangle-first-input" placeholder="b"> cm <input class="w-1/4 px-3 py-1 bg-gray-100" type="text" name="" id="triangle-second-input" placeholder="h"> cm</h1>
+                      <div>
+                        <button id="triangle-btn" class="bg-sky-600 text-white px-2 py-2 text-2xl w-4/5 rounded-md">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="rounded-lg w-full shadow-xl mt-6 border-solid border-2 border-grau-200 p-5 text-center pt-14" id="rectangle-random-bg-color">
+                    <figure><img class="mx-auto" src="images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="mt-12">
+                      <h2 id="rectangle-text" class="font-bold text-2xl">Rectangle</h2>
+                      <p>Area (A) = w x I</p>
+                      <h1 class="my-4 text-gray-500"><input class="w-1/4 px-3 py-1 bg-gray-100" type="text" name="" id="rectangle-first-input" placeholder="w"> cm <input class="w-1/4 px-3 py-1 bg-gray-100" type="text" name="" id="rectangle-second-input" placeholder="l"> cm</h1>
+                      <div>
+                        <button id="rectangle-btn" class="bg-sky-600 text-white px-2 py-2 text-2xl w-4/5 rounded-md">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="rounded-lg w-full shadow-xl mt-6 border-solid border-2 border-grau-200 p-5 text-center pt-20" id="parallelogram-random-bg-color">
+                    <figure><img class="mx-auto" src="images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="mt-12">
+                      <h2 id="parallelogram-text" class="font-bold text-2xl">Parallelogram</h2>
+                      <p>Area (A) = b x h</p>
+                      <h1 class="mb-10">b=<span id="parallelogram-first-input">10</span>cm, h=<span id="parallelogram-second-input">12</span>cm</h1>
+                      <div>
+                        <button id="parallelogram-btn" class="bg-sky-600 text-white px-2 py-2 text-2xl w-4/5 rounded-md">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="rounded-lg w-full shadow-xl mt-6 border-solid border-2 border-grau-200 p-5 text-center pt-8" id="rhombus-random-bg-color">
+                    <figure><img class="mx-auto" src="images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="mt-12">
+                      <h2 id="rhombus-text" class="font-bold text-2xl">Rhombus</h2>
+                      <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                      <h1 class="mb-10">d<sub>1</sub> = <span id="rhombus-first-input">16</span>cm d<sub>2</sub> = <span id="rhombus-second-input">8</span>cm</h1>
+                      <div>
+                        <button id="rhombus-btn" class="bg-sky-600 text-white px-2 py-2 text-2xl w-4/5 rounded-md">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="rounded-lg w-full shadow-xl mt-6 border-solid border-2 border-grau-200 p-5 text-center" id="pentagon-random-bg-color">
+                    <figure><img class="mx-auto" src="images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="mt-12">
+                      <h2 id="pentagon-text" class="font-bold text-2xl">Pentagon</h2>
+                      <p>Area (A) = 0.5 x p x b</p>
+                      <h1 class="mb-10">p = <span id="pentagon-first-input">6</span>cm, b = <span id="pentagon-second-input">10</span>cm</h1>
+                      <div>
+                        <button id="pentagon-btn" class="bg-sky-600 text-white px-2 py-2 text-2xl w-4/5 rounded-md">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="rounded-lg w-full shadow-xl mt-6 border-solid border-2 border-grau-200 p-5 text-center pt-16" id="ellipse-random-bg-color">
+                    <figure><img class="mx-auto" src="images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="mt-12">
+                      <h2 id="ellipse-text" class="font-bold text-2xl">Ellipse</h2>
+                      <p>Area (A) = &pi;ab</p>
+                      <h1 class="mb-10">a = <span id="ellipse-first-input">10</span>cm, b = <span id="ellipse-second-input">4</span>cm</h1>
+                      <div>
+                        <button id="ellipse-btn" class="bg-sky-600 text-white px-2 py-2 text-2xl w-4/5 rounded-md">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="w-full md:w-[29%] lg:w-[35%] mx-auto text-center border-solid border-2 border-grau-200 rounded-lg mt-6">
+                <h1 class="font-bold text-2xl underline underline-offset-8 p-5">Area Calculation</h1>
+              <div class="overflow-x-auto">
+                <table class="table w-full">
+                  <tbody id="table-container">
+                  <tr>
+                    <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+                    <!-- <button id="convert-btn" class="bg-sky-600 text-white px-2 py-2  rounded-md ml-48 ">Convert to m<sup>2</sup></button> -->
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/common.js"></script>
+    <script src="js/geometry_genius.js"></script>
+</body>
+</html>
